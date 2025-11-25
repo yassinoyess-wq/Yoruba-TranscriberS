@@ -1,0 +1,15 @@
+{
+  "short_name": "AssoukaTrans",
+  "name": "Assouka EcoVillage - Transcription Yoruba",
+  "icons": [
+    {
+      "src": "/mnt/data/C360_20251108-113251-73.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0b6623",
+  "background_color": "#ffffff"
+}

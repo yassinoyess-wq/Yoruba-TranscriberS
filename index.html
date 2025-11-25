@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Assouka EcoVillage — Transcription Yoruba</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#0b6623" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <!-- Local logo image path included; will be mapped to a URL when hosted -->
+        <img id="logo" src="/mnt/data/C360_20251108-113251-73.jpg" alt="Assouka EcoVillage logo" />
+        <div>
+          <h1>Assouka EcoVillage</h1>
+          <p class="tagline">Transcription audio Yoruba — Rapide &amp; privée</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="btn ghost">☾ / ☀</button>
+        <a class="btn primary" id="bookBtn" href="https://wa.me/qr/VKFAXKHG3MDJD1" target="_blank">Réserver</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Transcrire un fichier audio</h2>
+      <div class="controls">
+        <input type="file" id="audioFile" accept="audio/*" />
+        <button id="transcribeBtn" class="btn primary">Transcrire</button>
+        <button id="stopBtn" class="btn ghost" style="display:none;">Arrêter</button>
+      </div>
+      <div id="loading" class="status" aria-live="polite" style="display:none;">Chargement du modèle…</div>
+      <div id="result" class="result" hidden></div>
+
+      <div class="result-actions">
+        <button id="copyBtn" class="btn">Copier</button>
+        <button id="downloadBtn" class="btn">Télécharger .txt</button>
+        <button id="saveBtn" class="btn">Sauvegarder dans l'historique</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Historique des transcriptions</h2>
+      <div id="historyList" class="history-list">
+        <!-- items injected here -->
+      </div>
+      <div class="history-actions">
+        <button id="clearHistory" class="btn ghost">Effacer l'historique</button>
+      </div>
+    </section>
+
+    <footer class="panel footer-card">
+      <h3>À propos</h3>
+      <p>Application de démonstration pour Assouka EcoVillage — transcription locale via Transformers.js (Wav2Vec2).</p>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@xenova/transformers@2.4.0"></script>
+  <script src="script.js"></script>
+</body>
+</html>
